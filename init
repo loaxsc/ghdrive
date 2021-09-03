@@ -1,0 +1,10 @@
+#!/bin/sh
+cd /kaggle
+
+if [ ! -e VOC2007 ]; then
+    tar -jxf /kaggle/input/voc2007/VOC2007.tar.bz2_
+    ln -s //kaggle/input/voc2007/JPEGImages/ /kaggle/VOC2007/JPEGImages
+    echo 'Get VOC2007 in "/kaggle/VOC2007"'
+else
+    echo '/kaggle/VOC2007 exists'
+fi
