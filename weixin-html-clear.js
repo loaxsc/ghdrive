@@ -239,26 +239,26 @@
 
     // *** image load complete ***
     // YFSDaA：李子暘
-      if ( i>0 && (i >= imgs.length || /bianw|YFSDaA|C4nuwNA/.test(imgs[i-1].src))) {
-        clearInterval(h);
-        setTimeout(function() {
-          shrinkElement(nr);
-          insertElements();
-		  if (document.querySelector('#js_author_name').textContent == '李子旸') {
-			document.querySelector('#js_content > p:nth-of-type(2)').remove();
-			document.querySelector('#org_url').previousElementSibling.remove();
-        /**/
-      document.querySelector('#org_url').previousElementSibling.remove();
+    if ( i>0 && (i >= imgs.length || /bianw|YFSDaA|C4nuwNA/.test(imgs[i-1].src))) {
+      clearInterval(h);
+      setTimeout(function() {
+        shrinkElement(nr);
+        insertElements();
+	    if (document.querySelector('#js_author_name').textContent == '李子旸') {
+		  document.querySelector('#js_content > p:nth-of-type(2)').remove();
+		  document.querySelector('#org_url').previousElementSibling.remove();
+		  /**/
+		  document.querySelector('#org_url').previousElementSibling.remove();
 
-			document.querySelector('#org_url').previousElementSibling.children[0].remove();
-			document.querySelector('#org_url').previousElementSibling.querySelector('img').remove();
-			document.querySelector('#org_url').previousElementSibling.querySelector('img').remove();
-      document.querySelector('#org_url').previousElementSibling.previousElementSibling.remove();/**/
-		  }
-          nr.innerHTML = nr.innerHTML.trim();
-          console.log('Normal mode complete!');
-        }, 1000);
-      }
+		  document.querySelector('#org_url').previousElementSibling.children[0].remove();
+		  document.querySelector('#org_url').previousElementSibling.querySelector('img').remove();
+		  document.querySelector('#org_url').previousElementSibling.querySelector('img').remove();
+		  document.querySelector('#org_url').previousElementSibling.previousElementSibling.remove();/**/
+		}
+		  nr.innerHTML = nr.innerHTML.trim();
+		  console.log('Normal mode complete!');
+		}, 1000);
+    }
   } // }}}
 // }}}
 // }}}
