@@ -124,7 +124,7 @@ setTimeout(function() {
   });
 
   var nr = document.querySelector('#js_content');
-  shrinkElement(nr);
+  //shrinkElement(nr);
   insertElements();
 },1000);
 
