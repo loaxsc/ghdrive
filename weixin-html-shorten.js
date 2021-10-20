@@ -1,3 +1,5 @@
+var nr = document.querySelector('#js_content');
+
 var shrinkElement = function(elem) { // {{{
   if ( elem.childElementCount == 0 ) {
     return 0;
@@ -126,7 +128,6 @@ setTimeout(function() {
 
   console.log('ok 2');
 
-  var nr = document.querySelector('#js_content');
   //shrinkElement(nr);
   //insertElements();
   console.log('ok 3');
