@@ -310,7 +310,7 @@
   btn.setAttribute('style','padding: 0 2px;');
 
   var weixin_btn_nr_func = function(e) {
-      var text = document.querySelector('#js_content').innerHTML.strip();
+      var text = document.querySelector('#js_content').innerHTML.trim();
       navigator.clipboard.writeText(text).then(function() {
           console.log('Async: Copying to clipboard was successful!');
       }, function(err) {
