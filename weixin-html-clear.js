@@ -1,7 +1,8 @@
 (function() {
   'use strict';
   var author, nr, imgs;
-  var i = 0, h, anchor;
+  var h, anchor;
+  var i = 0; // index of images
 
   // FUNCTIONS {{{
   var eventFire = function(el, etype) { // {{{
@@ -239,21 +240,21 @@
 
     // *** image load complete ***
     // YFSDaA：李子暘
-    if ( i>0 && (i >= imgs.length || /bianw|YFSDaA|C4nuwNA/.test(imgs[i-1].src))) {
+    if ( i > 0 && (i >= imgs.length || /bianw|YFSDaA|C4nuwNA/.test(imgs[i-1].src))) {
       clearInterval(h);
       setTimeout(function() {
         shrinkElement(nr);
         insertElements();
 	    if (document.querySelector('#js_author_name').textContent == '李子旸') {
 		  document.querySelector('#js_content > p:nth-of-type(2)').remove();
-		  document.querySelector('#org_url').previousElementSibling.remove();
-		  /**/
-		  document.querySelector('#org_url').previousElementSibling.remove();
+		  var ref_pos = document.querySelector('#org_url');
+		  ref_pos.previousElementSibling.remove();
+		  ref_pos.previousElementSibling.remove();
 
-		  document.querySelector('#org_url').previousElementSibling.children[0].remove();
-		  document.querySelector('#org_url').previousElementSibling.querySelector('img').remove();
-		  document.querySelector('#org_url').previousElementSibling.querySelector('img').remove();
-		  document.querySelector('#org_url').previousElementSibling.previousElementSibling.remove();/**/
+		  ref_pos.previousElementSibling.children[0].remove();
+		  ref_pos.previousElementSibling.querySelector('img').remove();
+		  ref_pos.previousElementSibling.querySelector('img').remove();
+		  ref_pos.previousElementSibling.previousElementSibling.remove();/**/
 		}
 		  nr.innerHTML = nr.innerHTML.trim();
 		  console.log('Normal mode complete!');
@@ -271,13 +272,12 @@
     }
   }
 
+  setTimeout(eventFire, 1000,document.getElementById('publish_time'), 'click');
   nr = document.getElementById('js_content');
   author = document.querySelector('#meta_content').textContent;
-  setTimeout(eventFire, 1000,document.getElementById('publish_time'), 'click');
 
   // load image
   imgs = nr.getElementsByTagName('img');
-
   if (imgs.length > 0 ) {
     if ( author.includes('全球风口') || author.includes('首席未来官') ) {
     //if ( /全球风口|首席未来官/.test(author) ) {
@@ -301,6 +301,26 @@
     // Page without image
     shrinkElement(nr);
     insertElements();
-  }// }}}
+  }
+
+  var btn = document.createElement('input');
+  btn.setAttribute('id','weixin_btn_copy_nr');
+  btn.setAttribute('type','button');
+  btn.setAttribute('value','copy content');
+  btn.setAttribute('style','padding: 0 2px;');
+
+  var weixin_btn_func = function(e) {
+      var text = document.querySelector('#js_content').innerHTML.strip();
+      navigator.clipboard.writeText(text).then(function() {
+          console.log('Async: Copying to clipboard was successful!');
+      }, function(err) {
+          console.error('Async: Could not copy text: ', err);
+      });
+  }
+  btn.addEventListener('click', weixin_btn_func);
+  //document.querySelector('#publish_time').after(btn);
+  document.querySelector('#activity-name').after(btn);
+
+  // }}}
 })();
-// vim: fdm=marker
+// vim: fdm=marker sw=2
