@@ -2,7 +2,7 @@ var btn = document.createElement('input');
 btn.setAttribute('id','bilibili_btn');
 btn.setAttribute('type','button');
 btn.setAttribute('value','copy url');
-btn.setAttribute('style','padding: 0 2px;');
+btn.setAttribute('style','padding: 0 2px; margin: 0 2px;');
 
 var bilibili_btn_func = function(e) {
   var url = location.toString();
