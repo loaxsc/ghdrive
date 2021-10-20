@@ -26,7 +26,7 @@ var h = setInterval(function() {
     //var nr = document.createElement('p');
     //nr.textContent = document.querySelector('h1.video-title')['title'];
     //document.querySelector('div#viewbox_report').append(nr)
-    document.querySelector('h1').after(btn);
+    document.querySelector('h1 > span').after(btn);
   }
 }, 300);
 
