@@ -17,6 +17,7 @@ var bilibili_btn_func = function(e) {
   });
 }
 btn.addEventListener('click', bilibili_btn_func);
+
 var h = setInterval(function() {
   if (document.querySelector('script[src$="nc-loader-0.11.4.min.js"]')) {
     console.info('video is ok');
