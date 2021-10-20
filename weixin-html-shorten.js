@@ -125,6 +125,7 @@ setTimeout(function() {
 
   var nr = document.querySelector('#js_content');
   shrinkElement(nr);
+  insertElements();
 },1000);
 
 // vim: fdm=marker sw=2
