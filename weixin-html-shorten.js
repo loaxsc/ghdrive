@@ -117,13 +117,14 @@ setTimeout(function() {
   rq.append(btn);
   document.querySelector('#activity-name').after(rq);
 
+  console.log('ok 1')
   document.querySelectorAll('a').forEach((a) => {
 	if (/mp\.weixin\.qq\.com\/s\?__biz=\w+==&mid=\d+&idx=\d&sn=\w+/.test(a.href) ) {
 	  a.href = a.href.replace(/&(chksm|scene).+/,'');
 	}
   });
 
-  console.log('ok')
+  console.log('ok 2')
 
   var nr = document.querySelector('#js_content');
   //shrinkElement(nr);
