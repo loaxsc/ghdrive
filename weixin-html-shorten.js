@@ -39,6 +39,7 @@ var insertElements = function() { // {{{
   nr.insertBefore(d,nr.firstElementChild);
   nr.insertBefore(author,nr.firstElementChild);
   nr.insertBefore(tt,nr.firstElementChild);
+  console.log('ok 4');
 
   var h1 = document.createElement('h1');
   var a = document.createElement('a');
@@ -51,6 +52,7 @@ var insertElements = function() { // {{{
   p.id = 'datetime';
   nr.insertBefore(p,nr.firstElementChild);
   nr.insertBefore(h1,nr.firstElementChild);
+  console.log('ok 5');
 
   if ( document.querySelector('.article_modify_area') != null ) {
     nr.append(document.querySelector('.article_modify_area'));
@@ -63,6 +65,7 @@ var insertElements = function() { // {{{
   d.id = 'org_url';
   d.innerHTML = '<a href="{}">原始网址</a>'.replace('{}',document.querySelector('meta[name="org:url"]').content);
   nr.appendChild(d);
+  console.log('ok 6');
 } // }}}
 
 
