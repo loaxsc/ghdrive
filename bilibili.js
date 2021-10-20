@@ -17,7 +17,9 @@ var bilibili_btn_func = function(e) {
   });
 }
 btn.addEventListener('click', bilibili_btn_func);
-document.querySelector('h1').after(btn);
+setTimeout(function() {
+  document.querySelector('h1').after(btn);
+}, 1000);
 //rq.append(btn);
 
 // vim: fdm=marker sw=2
