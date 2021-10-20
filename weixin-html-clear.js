@@ -15,10 +15,18 @@
     }
   } // }}}
 
-  var weixin_init = function() {
+  var weixin_init = function() { // {{{
     eventFire(document.getElementById('publish_time'), 'click');
+
+    document.querySelectorAll('a').forEach((a) => {
+      if (/mp\.weixin\.qq\.com\/s\?__biz=\w+==&mid=\d+&idx=\d&sn=\w+/.test(a.href) ) {
+        a.href = a.href.replace(/&(chksm|scene).+/,'');
+      }
+    })
+
     var rq = document.createElement('div');
     rq.setAttribute('id','rongqi');
+
     var btn = document.createElement('input');
     btn.setAttribute('id','weixin_btn_copy_url');
     btn.setAttribute('type','button');
@@ -41,7 +49,6 @@
     }
     btn.addEventListener('click', weixin_btn_func);
     rq.append(btn);
-    //document.querySelector('#activity-name').after(btn);
 
     btn = document.createElement('input');
     btn.setAttribute('id','weixin_btn_copy_nr');
@@ -60,7 +67,8 @@
     btn.addEventListener('click', weixin_btn_nr_func);
     rq.append(btn);
     document.querySelector('#activity-name').after(rq);
-  }
+  } // }}}
+
   var xpath = function(xpathToExecute) { // {{{
     var result = [];
     var nodesSnapshot = document.evaluate(xpathToExecute, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
