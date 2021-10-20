@@ -301,25 +301,25 @@
     btn.setAttribute('value','copy content');
     btn.setAttribute('style','padding: 0 2px;');
 
-    var weixin_btn_nr_func = function(e) {
+    var weixin_btn_nr_func = async function(e) {
       if ( nr.children[1].id != 'datetime' ) {
         imgs = nr.getElementsByTagName('img');
         if (imgs.length > 0 ) {
           if ( author.includes('全球风口') || author.includes('首席未来官') ) {
-            h = setInterval(scroll2img_wang,200);
+            h = await setInterval(scroll2img_wang,200);
           } else if ( author.includes('丁辰灵')) {
-            h = setInterval(scroll2img_ding,200);
+            h = await setInterval(scroll2img_ding,200);
           } else if ( author.includes('眉山剑客陈平')) {
-              h = setInterval(scroll2img_chen,200);
+            h = await setInterval(scroll2img_chen,200);
           } else if ( author.includes('刘润')) {
-              h = setInterval(scroll2img_liu,200);
+            h = await setInterval(scroll2img_liu,200);
           } else { // 李子旸 罗辑思维
-              h = setInterval(scroll2img,200);
+            h = await setInterval(scroll2img,200);
           }
         } else {
           // Page without image
-          shrinkElement(nr);
-          insertElements();
+          await shrinkElement(nr);
+          await insertElements();
         }
       }
       var text = nr.innerHTML.trim();
