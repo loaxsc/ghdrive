@@ -126,7 +126,7 @@ setTimeout(function() {
 	}
   });
 
-  shrinkElement(nr);
+  //shrinkElement(nr);
   insertElements();
 },1000);
 
