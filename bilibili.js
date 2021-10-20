@@ -19,6 +19,7 @@ var bilibili_btn_func = function(e) {
 btn.addEventListener('click', bilibili_btn_func);
 
 var h = setInterval(function() {
+  console.log('...');
   if (document.querySelector('script[src$="nc-loader-0.11.4.min.js"]')) {
     console.info('video is ok');
     clearInterval(h);
@@ -27,6 +28,6 @@ var h = setInterval(function() {
     //document.querySelector('div#viewbox_report').append(nr)
     document.querySelector('h1').after(btn);
   }
-}, 300);
+}, 1000);
 
 // vim: fdm=marker sw=2
