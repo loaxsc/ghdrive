@@ -128,8 +128,8 @@ setTimeout(function() {
 
   console.log('ok 2');
 
-  //shrinkElement(nr);
-  insertElements();
+  shrinkElement(nr);
+  //insertElements();
   console.log('ok 3');
 },1000);
 
