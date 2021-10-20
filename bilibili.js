@@ -19,8 +19,8 @@ var bilibili_btn_func = function(e) {
 btn.addEventListener('click', bilibili_btn_func);
 
 var h = setInterval(function() {
-  console.log('...');
-  if (document.querySelector('script[src$="nc-loader-0.12.0.min.js"]')) {
+  console.log( document.querySelector('script[src$="nc-loader-0.12.0.min.js"]').toString());
+  if ( document.querySelector('script[src$="nc-loader-0.12.0.min.js"]') ) {
     console.info('video is ok');
     clearInterval(h);
     //var nr = document.createElement('p');
