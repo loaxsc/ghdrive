@@ -128,7 +128,7 @@ setTimeout(function() {
 
   var nr = document.querySelector('#js_content');
   //shrinkElement(nr);
-  insertElements();
+  //insertElements();
   console.log('ok 3');
 },1000);
 
