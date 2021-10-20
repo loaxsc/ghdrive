@@ -123,6 +123,8 @@ setTimeout(function() {
 	}
   });
 
+  console.log('ok')
+
   var nr = document.querySelector('#js_content');
   //shrinkElement(nr);
   insertElements();
