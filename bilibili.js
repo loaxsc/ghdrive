@@ -1,7 +1,7 @@
 var btn = document.createElement('input');
 btn.setAttribute('id','bilibili_btn');
 btn.setAttribute('type','button');
-btn.setAttribute('value','copy url');
+btn.setAttribute('value','copy url abc');
 //btn.setAttribute('style','padding: 0 2px; margin: 0 2px; color: #666;');
 
 var bilibili_btn_func = function(e) {
