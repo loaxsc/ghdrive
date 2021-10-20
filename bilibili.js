@@ -17,10 +17,15 @@ var bilibili_btn_func = function(e) {
   });
 }
 btn.addEventListener('click', bilibili_btn_func);
-
-setTimeout(function() {
-  document.querySelector('h1').after(btn);
-}, 5000);
-//rq.append(btn);
+var h = setInterval(function() {
+  if (document.querySelector('script[src$="nc-loader-0.11.4.min.js"]')) {
+    console.info('video is ok');
+    clearInterval(h);
+    //var nr = document.createElement('p');
+    //nr.textContent = document.querySelector('h1.video-title')['title'];
+    //document.querySelector('div#viewbox_report').append(nr)
+    document.querySelector('h1').after(btn);
+  }
+}, 300);
 
 // vim: fdm=marker sw=2
