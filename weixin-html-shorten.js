@@ -27,12 +27,15 @@ var shrinkElement = function(elem) { // {{{
 
 var insertElements = function() { // {{{
   // Get date: dt
+
+  console.log('ok 7');
   var dt = document.getElementById('publish_time').innerText.replaceAll('-','');
   var author = document.querySelector('meta[name="author"]');
   var tt = document.querySelector('meta[property="og:title"]');
   tt.setAttribute('property','title');
   tt.content = dt + '-' + tt.content.replace(/\s*\|\s*/g,'：').replace('?','？');
 
+  console.log('ok 8');
   var d = document.createElement('meta');
   d.name = 'org:url';
   d.content = location.toString();
