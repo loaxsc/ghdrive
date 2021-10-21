@@ -6,5 +6,5 @@ var xpath = function(xpathToExecute){
 	}
 	return result;
 }
-
 // vim: sw=2
+// abcdefg
