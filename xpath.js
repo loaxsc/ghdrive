@@ -1,4 +1,4 @@
-//  -12345 67890 11 12 13 14 115 116 117 118 119 120
+//  -12345 67890 11 12 13 14
 var xpath = function(xpathToExecute){
 	var result = [];
 	var nodesSnapshot = document.evaluate(xpathToExecute, document, null, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE, null );
