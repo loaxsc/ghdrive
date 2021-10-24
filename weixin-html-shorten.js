@@ -102,7 +102,7 @@ setTimeout(function() {
   btn.addEventListener('click', weixin_btn_func);
   rq.append(btn);
 
-  content.addEventListener('keydown', (e) => {
+  window.top.addEventListener('keydown', (e) => {
     if (e.altKey && e.code == 'Digit0') {
       e.preventDefault();
       var url = location.toString();
