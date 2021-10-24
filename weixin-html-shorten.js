@@ -102,12 +102,6 @@ setTimeout(function() {
   btn.addEventListener('click', weixin_btn_func);
   rq.append(btn);
 
-  window.top.addEventListener('keydown', (e) => {
-    if (e.altKey && e.code == 'Digit0') {
-      e.preventDefault();
-      weixin_btn_func(e);
-    }
-  });
 
   var btn = document.createElement('input');
   btn.setAttribute('id','weixin_btn_copy_nr');
@@ -127,7 +121,12 @@ setTimeout(function() {
   rq.append(btn);
   document.querySelector('#activity-name').after(rq);
 
+  // Hotkeys, Shortcuts
   window.top.addEventListener('keydown', (e) => {
+    if (e.altKey && e.code == 'Digit0') {
+      e.preventDefault();
+      weixin_btn_func(e);
+    }
     if ( e.shiftKey && e.altKey && e.code == 'Digit0' ) {
       e.preventDefault();
       weixin_btn_nr_func(e);
