@@ -101,6 +101,12 @@ setTimeout(function() {
   }
   btn.addEventListener('click', weixin_btn_func);
   rq.append(btn);
+  content.addEventListener('keydown', (e) = {
+    if(e.altKey && e.Code == 'Digit0'){
+      e.preventDefault();
+      weixin_btn_func(e);
+    }
+  })
 
   var btn = document.createElement('input');
   btn.setAttribute('id','weixin_btn_copy_nr');
@@ -131,4 +137,3 @@ setTimeout(function() {
 },1000);
 
 // vim: fdm=marker sw=2
-// this is a test 2
