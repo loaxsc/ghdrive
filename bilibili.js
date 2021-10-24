@@ -11,7 +11,8 @@ var bilibili_btn_func = function(e) {
            .innerText.split(' ')[0].replaceAll('-','');
   var title = document.querySelector('span.tit').innerText
                           .replace(/^温铁军：|【温铁军践闻录.*】$/g,'');
-  var text = '`' + dt + '`' + title + '`' + url + '`';
+  var text = '`' + title + '`' + url + '`' + dt + '`';
+  //var text = `\`${title}\`${url}\`${dt}\``
   navigator.clipboard.writeText(text).then(function() {
     console.log('Async: Copying to clipboard was successful!');
   }, function(err) {
