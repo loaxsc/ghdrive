@@ -104,9 +104,17 @@ setTimeout(function() {
   content.addEventListener('keydown', (e) = {
     if(e.altKey && e.Code == 'Digit0'){
       e.preventDefault();
-      weixin_btn_func(e);
+	  var url = location.toString();
+	  var dt = document.querySelector('#publish_time').textContent.replaceAll('-','');
+	  var title = document.querySelector('#activity-name').innerText;
+	  var text = '`' + dt + '`' + title + '`' + url + '`';
+	  navigator.clipboard.writeText(text).then(function() {
+		  console.log('Async: Copying to clipboard was successful!');
+	  }, function(err) {
+		  console.error('Async: Could not copy text: ', err);
+	  });
     }
-  })
+  });
 
   var btn = document.createElement('input');
   btn.setAttribute('id','weixin_btn_copy_nr');
