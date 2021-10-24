@@ -28,7 +28,6 @@ var shrinkElement = function(elem) { // {{{
 var insertElements = function() { // {{{
   // Get date: dt
 
-  var url = location.toString().replace(/&(chksm|scene).+/,'');
   var dt = document.getElementById('publish_time').innerText.replaceAll('-','');
   var author = document.querySelector('meta[name="author"]');
   var tt = document.querySelector('meta[property="og:title"]');
@@ -37,14 +36,14 @@ var insertElements = function() { // {{{
 
   var d = document.createElement('meta');
   d.name = 'org:url';
-  d.content = url;
+  d.content = location.toString();
   nr.insertBefore(d,nr.firstElementChild);
   nr.insertBefore(author,nr.firstElementChild);
   nr.insertBefore(tt,nr.firstElementChild);
 
   var h1 = document.createElement('h1');
   var a = document.createElement('a');
-  a['href'] = url;
+  a['href'] = location.toString();
   a.textContent = document.getElementById('activity-name').innerText;
   h1.append(a);
 
@@ -90,7 +89,7 @@ setTimeout(function() {
   btn.setAttribute('style','padding: 0 2px;');
 
   var weixin_btn_func = function(e) {
-	  var url = location.toString().replace(/&(chksm|scene).+/,'');
+	  var url = location.toString();
 	  var dt = document.querySelector('#publish_time').textContent.replaceAll('-','');
 	  var title = document.querySelector('#activity-name').innerText;
 	  var text = '`' + dt + '`' + title + '`' + url + '`';
