@@ -103,7 +103,7 @@ setTimeout(function() {
   rq.append(btn);
 
   content.addEventListener('keydown', (e) => {
-    if (e.altKey && e.Code == 'Digit0') {
+    if (e.altKey && e.code == 'Digit0') {
       e.preventDefault();
       var url = location.toString();
       var dt = document.querySelector('#publish_time').textContent.replaceAll('-','');
