@@ -135,7 +135,7 @@ setTimeout(function() {
 
   document.querySelectorAll('a').forEach((a) => {
 	if (/mp\.weixin\.qq\.com\/s\?__biz=\w+==&mid=\d+&idx=\d&sn=\w+/.test(a.href) ) {
-	  a.href = a.href.replace(/&(chksm|scene).+/,'');
+	  a.href = a.href.replace(/&(chksm|scene|source).+/,'');
 	}
   });
 
