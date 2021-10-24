@@ -105,7 +105,8 @@ setTimeout(function() {
   window.top.addEventListener('keydown', (e) => {
     if (e.altKey && e.code == 'Digit0') {
       e.preventDefault();
-      var url = location.toString();
+      weixin_btn_func(e);
+      /*var url = location.toString();
       var dt = document.querySelector('#publish_time').textContent.replaceAll('-','');
       var title = document.querySelector('#activity-name').innerText;
       var text = '`' + dt + '`' + title + '`' + url + '`';
@@ -113,7 +114,7 @@ setTimeout(function() {
           console.log('Async: Copying to clipboard was successful!');
       }, function(err) {
           console.error('Async: Could not copy text: ', err);
-      });
+      });*/
     }
   });
 
