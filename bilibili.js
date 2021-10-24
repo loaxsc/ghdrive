@@ -3,7 +3,7 @@ btn.setAttribute('id','bilibili_btn');
 btn.setAttribute('type','button');
 btn.setAttribute('value','copy url');
 // stylish
-//btn.setAttribute('style','padding: 0 2px; margin: 0 2px; color: #666;');
+btn.setAttribute('style','padding: 0 2px; margin: 0 2px; color: #666;');
 
 var bilibili_btn_func = function(e) {
   var url = location.toString();
