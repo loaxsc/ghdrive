@@ -3,7 +3,7 @@ btn.setAttribute('id','bilibili_btn');
 btn.setAttribute('type','button');
 btn.setAttribute('value','copy url');
 // stylish
-btn.setAttribute('style','padding: 0 2px; margin: 0 2px; color: #666;');
+//btn.setAttribute('style','padding: 0 2px; margin: 0 2px; color: #666;');
 
 var bilibili_btn_func = function(e) {
   var url = location.toString();
@@ -39,7 +39,7 @@ var h = setInterval(function() {
     clearInterval(h);
     document.querySelector('div.video-data').append(btn);
   }
-}, 300);/**/var btn = document.createElement('input');
+}, 300);/**/
 
 //btn.setAttribute('id','bilibili_btn');
 //btn.setAttribute('type','button');
