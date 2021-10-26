@@ -10,6 +10,7 @@ var bilibili_btn_func = function(e) {
   var dt = document.querySelector('div.video-data > span:nth-of-type(3)')
            .innerText.split(' ')[0].replaceAll('-','');
   var title = document.querySelector('span.tit').innerText
+                          .replace(/【武志红】$/g,'')
                           .replace(/^温铁军：|【温铁军践闻录.*】$/g,'');
   var text = '`' + title + '`' + url + '`' + dt + '`';
   //var text = `\`${title}\`${url}\`${dt}\``
