@@ -136,12 +136,12 @@ setTimeout(function() {
 
   // Hotkeys, Shortcuts
   window.top.addEventListener('keydown', (e) => {
-    if (!e.shiftKey && e.altKey && e.code == 'Digit0') {
+    if (!e.shiftKey && !e.ctrlKey && e.altKey && e.code == 'Digit0') {
       e.preventDefault();
       weixin_btn_func(e);
       btn_effect('weixin_btn_copy_url');
     }
-    if ( e.shiftKey && e.altKey && e.code == 'Digit0' ) {
+    if ( e.shiftKey && !e.ctrlKey && e.altKey && e.code == 'Digit0' ) {
       e.preventDefault();
       weixin_btn_nr_func(e);
       btn_effect('weixin_btn_copy_nr');
