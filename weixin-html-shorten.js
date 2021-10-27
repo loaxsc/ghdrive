@@ -123,7 +123,7 @@ setTimeout(function() {
 
   var btn_effect = function(btn_id) {
     var btn_style = document.createElement('style');
-    btn_style.setAttribute('id', btn_id);
+    btn_style.setAttribute('id', btn_id + '_effect');
     btn_style.innerHTML = '#' + btn_id + ' { box-shadow: 2px 2px rgba(131, 204, 234, 0.5); }';
     document.body.appendChild(btn_style);
     console.log('function on');
@@ -138,7 +138,7 @@ setTimeout(function() {
     if (e.altKey && e.code == 'Digit0') {
       e.preventDefault();
       weixin_btn_func(e);
-      btn_effect('btn_style');
+      btn_effect('weixin_btn_copy_url');
     }
     if ( e.shiftKey && e.altKey && e.code == 'Digit0' ) {
       e.preventDefault();
