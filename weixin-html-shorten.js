@@ -121,11 +121,23 @@ setTimeout(function() {
   rq.append(btn);
   document.querySelector('#activity-name').after(rq);
 
+  var btn_effect = function (btn_id) {
+    var btn_style = document.createElement('style');
+    btn_style.setAttribute('id', btn_id);
+    btn_style.innerHTML = '#' + btn_id + ' { box-shadow: 2px 2px rgba(131, 204, 234, 0.5); }';
+    document.body.appendChild(btn_style);
+
+    setTimeout(() => {
+        document.body.removeChild(btn_style);
+    }, 500);
+  }
+
   // Hotkeys, Shortcuts
   window.top.addEventListener('keydown', (e) => {
     if (e.altKey && e.code == 'Digit0') {
       e.preventDefault();
       weixin_btn_func(e);
+      btn_effect_btn_url();
     }
     if ( e.shiftKey && e.altKey && e.code == 'Digit0' ) {
       e.preventDefault();
