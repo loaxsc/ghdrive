@@ -124,7 +124,8 @@ setTimeout(function() {
   var btn_effect = function(btn_id) {
     var btn_style = document.createElement('style');
     btn_style.setAttribute('id', btn_id + '_effect');
-    btn_style.innerHTML = '#' + btn_id + ' { box-shadow: 2px 2px rgba(131, 204, 234, 0.5); }';
+    btn_style.innerHTML = '#' + btn_id //+ ' { box-shadow: 2px 2px rgba(131, 204, 234, 0.5); }';
+      + ' { border: 2px solid skyblue; border-radius: 3px; }';
     document.body.appendChild(btn_style);
     console.log('function on');
 
