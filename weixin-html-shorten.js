@@ -144,6 +144,7 @@ setTimeout(function() {
     if ( e.shiftKey && e.altKey && e.code == 'Digit0' ) {
       e.preventDefault();
       weixin_btn_nr_func(e);
+      btn_effect('weixin_btn_copy_nr');
     }
   });
 
