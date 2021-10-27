@@ -138,7 +138,7 @@ setTimeout(function() {
     if (e.altKey && e.code == 'Digit0') {
       e.preventDefault();
       weixin_btn_func(e);
-      btn_effect_btn_url();
+      btn_effect('btn_style');
     }
     if ( e.shiftKey && e.altKey && e.code == 'Digit0' ) {
       e.preventDefault();
