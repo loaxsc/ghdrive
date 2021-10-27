@@ -128,9 +128,9 @@ setTimeout(function() {
     document.body.appendChild(btn_style);
     console.log('function on');
 
-    setTimeout(function() {
-        document.body.removeChild(btn_style);
-    }, 500);
+    //setTimeout(function() {
+        //document.body.removeChild(btn_style);
+    //}, 500);
   }
 
   // Hotkeys, Shortcuts
