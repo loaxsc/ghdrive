@@ -80,9 +80,7 @@ setTimeout(function() {
   eventFire(document.getElementById('publish_time'),'click');
 
   //document.body.appendChild(rq_style);
-  //var rq = document.createElement('div');
-
-  var rq = document.querySelector('div#rongqi')
+  var rq = document.createElement('div');
   rq.setAttribute('id','rongqi');
   rq.style = ['z-index: 1;',
               'position: fixed;',
