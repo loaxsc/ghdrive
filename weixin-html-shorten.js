@@ -80,7 +80,7 @@ setTimeout(function() {
   eventFire(document.getElementById('publish_time'),'click');
 
   //document.body.appendChild(rq_style);
-  var rq = document.createElement('div');
+  //var rq = document.createElement('div');
 
   var rq = document.querySelector('div#rongqi')
   rq.setAttribute('id','rongqi');
@@ -90,6 +90,7 @@ setTimeout(function() {
               ' right: 0px;',
               'left: ' + document.querySelector('body').getBoundingClientRect()['x'] +'px;',
               'line-height: 1em;'].join('\n');
+  console.log('ok 0');
   var adjust_btn_pos = function(e) {
     document.querySelector('div#rongqi').style['left']
       = document.querySelector('body').getBoundingClientRect()['x'] +'px;'
