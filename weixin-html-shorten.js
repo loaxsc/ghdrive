@@ -147,7 +147,7 @@ setTimeout(function() {
 
   var adjust_btn_pos = function(e) {
     document.querySelector('div#rongqi').style['left']
-      = document.querySelector('body').getBoundingClientRect()['x'] +'px;'
+      = document.querySelector('body').getBoundingClientRect()['x'] +'px';
   };
   window.addEventListener('resize', adjust_btn_pos(event),true);
   console.log('ok');
