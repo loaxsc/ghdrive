@@ -149,7 +149,7 @@ setTimeout(function() {
     document.querySelector('div#rongqi').style['left']
       = document.querySelector('body').getBoundingClientRect()['x'] +'px';
   };
-  window.addEventListener('resize', adjust_btn_pos(event),true);
+  window.addEventListener('resize', adjust_btn_pos, true);
   console.log('ok');
 
   // Hotkeys, Shortcuts
