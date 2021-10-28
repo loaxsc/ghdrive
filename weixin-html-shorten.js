@@ -88,7 +88,7 @@ setTimeout(function() {
               ' right: 0px;',
               'left: ' + document.querySelector('body').getBoundingClientRect()['x'] +'px;',
               'line-height: 1em;'].join('\n');
-  console.log('ok 0');
+  //console.log('ok 0');
 
   var btn = document.createElement('input');
   btn.setAttribute('id','weixin_btn_copy_url');
@@ -128,9 +128,7 @@ setTimeout(function() {
   btn.addEventListener('click', weixin_btn_nr_func);
   rq.append(btn);
   document.querySelector('#activity-name').after(rq);
-  console.log('ok 2');
-
-
+  //console.log('ok 2');
 
   var btn_effect = function(btn_id) {
     var btn_style = document.createElement('style');
@@ -151,7 +149,6 @@ setTimeout(function() {
       = document.querySelector('body').getBoundingClientRect()['x'] +'px';
   };
   window.addEventListener('resize', adjust_btn_pos, true);
-  //console.log('ok');
 
   // Hotkeys, Shortcuts
   window.top.addEventListener('keydown', (e) => {
