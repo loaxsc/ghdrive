@@ -79,23 +79,23 @@ setTimeout(function() {
   }
   eventFire(document.getElementById('publish_time'),'click');
 
-  document.body.appendChild(rq_style);
+  //document.body.appendChild(rq_style);
   var rq = document.createElement('div');
 
-  /*var rq = document.querySelector('div#rongqi')
+  var rq = document.querySelector('div#rongqi')
   rq.setAttribute('id','rongqi');
   rq.style = ['z-index: 1;',
               'position: fixed;',
               'top: 0px;',
-              //' right: 0px;',
+              ' right: 0px;',
               'left: ' + document.querySelector('body').getBoundingClientRect()['x'] +'px;',
               'line-height: 1em;'].join('\n');
   var adjust_btn_pos = function(e) {
     document.querySelector('div#rongqi').style['left']
       = document.querySelector('body').getBoundingClientRect()['x'] +'px;'
   };
-  window.addEventListener('resize', adjust_btn_pos(event),true);*/
-  console.log('ok')
+  window.addEventListener('resize', adjust_btn_pos(event),true);
+  console.log('ok');
 
   var btn = document.createElement('input');
   btn.setAttribute('id','weixin_btn_copy_url');
