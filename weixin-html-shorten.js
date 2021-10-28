@@ -89,12 +89,6 @@ setTimeout(function() {
               'left: ' + document.querySelector('body').getBoundingClientRect()['x'] +'px;',
               'line-height: 1em;'].join('\n');
   console.log('ok 0');
-  var adjust_btn_pos = function(e) {
-    document.querySelector('div#rongqi').style['left']
-      = document.querySelector('body').getBoundingClientRect()['x'] +'px;'
-  };
-  window.addEventListener('resize', adjust_btn_pos(event),true);
-  console.log('ok');
 
   var btn = document.createElement('input');
   btn.setAttribute('id','weixin_btn_copy_url');
@@ -150,6 +144,13 @@ setTimeout(function() {
         document.body.removeChild(btn_style);
     }, 500);
   }
+
+  var adjust_btn_pos = function(e) {
+    document.querySelector('div#rongqi').style['left']
+      = document.querySelector('body').getBoundingClientRect()['x'] +'px;'
+  };
+  window.addEventListener('resize', adjust_btn_pos(event),true);
+  console.log('ok');
 
   // Hotkeys, Shortcuts
   window.top.addEventListener('keydown', (e) => {
