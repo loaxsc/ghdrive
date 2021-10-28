@@ -146,11 +146,12 @@ setTimeout(function() {
   }
 
   var adjust_btn_pos = function(e) {
-    document.querySelector('div#rongqi').style['left']
+    //document.querySelector('div#rongqi').style['left']
+    rq.style['left']
       = document.querySelector('body').getBoundingClientRect()['x'] +'px';
   };
   window.addEventListener('resize', adjust_btn_pos, true);
-  console.log('ok');
+  //console.log('ok');
 
   // Hotkeys, Shortcuts
   window.top.addEventListener('keydown', (e) => {
