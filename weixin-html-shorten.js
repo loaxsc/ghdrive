@@ -99,7 +99,8 @@ setTimeout(function() {
   var weixin_btn_func = function(e) {
 	  var url = location.toString();
 	  var dt = document.querySelector('#publish_time').textContent.replaceAll('-','');
-	  var title = document.querySelector('#activity-name').innerText;
+	  var title = document.querySelector('#activity-name').innerText
+                    .replace('丁辰灵：','');
 	  var text = '`' + title + '`' + url + '`' + dt + '`';
 	  navigator.clipboard.writeText(text).then(function() {
 		  console.log('Async: Copying to clipboard was successful!');
