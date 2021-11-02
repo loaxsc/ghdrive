@@ -85,7 +85,7 @@ setTimeout(function() {
   rq.style = ['z-index: 1;',
               'position: fixed;',
               'top: 0px;',
-              ' right: 0px;',
+              'right: 0px;',
               'left: ' + document.querySelector('body').getBoundingClientRect()['x'] +'px;',
               'line-height: 1em;'].join('\n');
   //console.log('ok 0');
@@ -94,7 +94,7 @@ setTimeout(function() {
   btn.setAttribute('id','weixin_btn_copy_url');
   btn.setAttribute('type','button');
   btn.setAttribute('value','copy url');
-  btn.setAttribute('style','padding: 0 2px;');
+  btn.setAttribute('style','padding: 0 2px; color: #666;');
 
   var weixin_btn_func = function(e) {
     var url = location.toString()
@@ -117,7 +117,7 @@ setTimeout(function() {
   btn.setAttribute('id','weixin_btn_copy_nr');
   btn.setAttribute('type','button');
   btn.setAttribute('value','copy content');
-  btn.setAttribute('style','padding: 0 2px;');
+  btn.setAttribute('style','padding: 0 2px; color: #666;');
 
   var weixin_btn_nr_func = function(e) {
 	  var text = document.querySelector('#js_content').innerHTML.trim();
