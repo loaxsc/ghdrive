@@ -13,6 +13,7 @@ var bilibili_btn_func = function(e) {
   var title = document.querySelector('span.tit').innerText
                       .replace(/【武志红】$/g,'')
                       .replace(/^【眉山論劍】/g,'')
+                      .replace(/^【张捷评新闻】/g,'')
                       .replace(/^温铁军：|【温铁军践闻录.*】$/g,'');
   var text = '`' + title + '`' + url + '`' + dt + '`';
   //var text = `\`${title}\`${url}\`${dt}\``
